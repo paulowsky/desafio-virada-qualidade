@@ -1,6 +1,10 @@
 version: "3.9"
 services:
-  tests:
+  backend:
     build: backend/.
     volumes: 
       - ./reports-backend/:/tests/reports/
+  frontend:
+    build: frontend/.
+    volumes: 
+      - ./reports-frontend/:/tests/reports/

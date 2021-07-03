@@ -19,6 +19,7 @@ logger_parallel: --format ParallelTests::Cucumber::FailuresLogger --out cucumber
 
 # Browsers
 chrome: BROWSER=chrome
+headless: HEADLESS=true
 
 # Application
 web: APP=web

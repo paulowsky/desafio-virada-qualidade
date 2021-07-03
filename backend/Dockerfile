@@ -25,4 +25,4 @@ RUN gem install bundler &&\
 COPY features/ features/
 COPY cucumber.yml ./
 
-ENTRYPOINT [ "bundle", "exec", "cucumber", "-p", "parallel" ]
+ENTRYPOINT bundle exec parallel_cucumber features/ -n 8 -o "-p parallel"

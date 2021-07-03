@@ -25,6 +25,7 @@ O código utiliza Design Patterns e estruturações avançadas, visando manuten�
 - Validações profundas (feature validada ao todo)
 - Testes e2e de verdade -> simulando usuário (acessos através de clicks, sem hooks de facilitação)
 - Validação de fluxos felizes e tristes
+- Execução em headless
 
 ## Requisitos
 - Ruby >= 2.5.3 ou Docker
@@ -39,8 +40,9 @@ O código utiliza Design Patterns e estruturações avançadas, visando manuten�
 2. Instalação de dependências: executar o comando `bundle install`
 3. Execução:
 - Execução dos testes serial: executar o comando `bundle exec cucumber`
-- Execução dos testes paralela: executar o comando `bundle exec cucumber -p parallel`
+- Execução dos testes paralela: executar o comando `bundle exec parallel_cucumber features/ -n 8 -o "-p parallel"`
 - Execução de uma suite específica: executar o comando `bundle exec cucumber -t @tag_desejada` (cenários e funcionalidades contém tags de execução)
+- Execução em headless: executar o comando `bundle exec cucumber -p default -p headless` (se for em paralelo: `bundle exec parallel_cucumber features/ -n 8 -o "-p parallel -p headless"`)
 
 ### Docker
 - Configurado para executar através do docker-compose, para executar volte a raiz do repositório e siga as instruções do README principal.

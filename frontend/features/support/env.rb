@@ -9,6 +9,7 @@ APP ||= ENV['APP']
 BROWSER ||= ENV['BROWSER'].to_sym
 TARGET ||= ENV['TARGET']
 ISPARALLELRUNNING ||= ENV['PARALLELRUNNING']
+HEADLESS ||= ENV['HEADLESS']
 
 CONFIG_UI = YAML.load_file(File.dirname(__FILE__) + "/env/#{APP}/config.yml")
 
@@ -19,7 +20,7 @@ puts "URL: #{URL}"
 
 Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new(
-    args: %w[
+    args: %W[
       --ignore-ssl-errors
       --ignore-certificate-errors
       --disable-popup-blocking
@@ -33,6 +34,9 @@ Capybara.register_driver :chrome do |app|
       --disable-impl-side-painting
       --debug_level=3
       --log-level=3
+      --disable-dev-shm-usage
+      #{'--headless' if HEADLESS}
+      #{'--disable-site-isolation-trials' if HEADLESS}
     ]
   )
   client = Selenium::WebDriver::Remote::Http::Default.new

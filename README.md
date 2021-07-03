@@ -3,6 +3,8 @@
 Projeto de automação de testes desenvolvido para o desafio Virada da Qualidade.\
 Cada Projeto possui sua própria documentação específica em sua respectiva pasta.
 
+## Execução local
+O tutorial de execução local está nos READMEs de cada projeto.
 ## Execução docker-compose
 1. Acesso: acessar a raiz do repositório usando um terminal
 2. Execução:
