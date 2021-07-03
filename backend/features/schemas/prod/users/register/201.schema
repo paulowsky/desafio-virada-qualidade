@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "title": "The root schema",
+  "required": [
+    "jwt"
+  ],
+  "properties": {
+    "jwt": {
+      "type": "string",
+      "title": "Token válido do usuário"
+    }
+  }
+}

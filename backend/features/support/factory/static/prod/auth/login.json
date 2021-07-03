@@ -1,0 +1,20 @@
+{
+  "valido" : {
+    "name": "Automation Engineer",
+    "email": "automationengineer@mailsac.com",
+    "password": "123qwe"
+  },
+  "body-vazio" : {},
+  "senha-errada" : {
+    "email": "automationengineer@mailsac.com",
+    "password": "123456"
+  },
+  "senha-curta": {
+    "email": "automationengineer@mailsac.com",
+    "password": "12345"
+  },
+  "email-invalido": {
+    "email": "email.com",
+    "password": "123qwe"
+  }
+}

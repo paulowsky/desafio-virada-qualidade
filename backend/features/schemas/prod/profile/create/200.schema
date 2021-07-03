@@ -1,0 +1,214 @@
+{
+    "type": "object",
+    "title": "The root schema",
+    "required": [
+        "_id",
+        "company",
+        "location",
+        "status",
+        "website",
+        "skills",
+        "bio",
+        "githubusername",
+        "experience",
+        "education",
+        "social",
+        "date"
+    ],
+    "properties": {
+        "_id": {
+            "type": "string",
+            "title": "The _id schema"
+        },
+        "company": {
+            "type": "string",
+            "title": "The company schema"
+        },
+        "location": {
+            "type": "string",
+            "title": "The location schema"
+        },
+        "status": {
+            "type": "string",
+            "title": "The status schema"
+        },
+        "website": {
+            "type": "string",
+            "title": "The website schema"
+        },
+        "skills": {
+            "type": "array",
+            "title": "The skills schema",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "string",
+                        "title": "The first anyOf schema"
+                    }
+                ]
+            }
+        },
+        "bio": {
+            "type": "string",
+            "title": "The bio schema"
+        },
+        "githubusername": {
+            "type": "string",
+            "title": "The githubusername schema"
+        },
+        "experience": {
+            "type": "array",
+            "title": "The experience schema",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "required": [
+                            "_id",
+                            "title",
+                            "company",
+                            "location",
+                            "from",
+                            "to",
+                            "current",
+                            "description"
+                        ],
+                        "properties": {
+                            "_id": {
+                                "type": "string",
+                                "title": "The _id schema"
+                            },
+                            "title": {
+                                "type": "string",
+                                "title": "The title schema"
+                            },
+                            "company": {
+                                "type": "string",
+                                "title": "The company schema"
+                            },
+                            "location": {
+                                "type": "string",
+                                "title": "The location schema"
+                            },
+                            "from": {
+                                "type": "string",
+                                "title": "The from schema"
+                            },
+                            "to": {
+                                "type": "string",
+                                "title": "The to schema"
+                            },
+                            "current": {
+                                "type": "boolean",
+                                "title": "The current schema"
+                            },
+                            "description": {
+                                "type": "string",
+                                "title": "The description schema"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "education": {
+            "type": "array",
+            "title": "The education schema",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "required": [
+                            "_id",
+                            "school",
+                            "degree",
+                            "fieldofstudy",
+                            "from",
+                            "to",
+                            "current",
+                            "description"
+                        ],
+                        "properties": {
+                            "_id": {
+                                "type": "string",
+                                "title": "The _id schema"
+                            },
+                            "school": {
+                                "type": "string",
+                                "title": "The school schema"
+                            },
+                            "degree": {
+                                "type": "string",
+                                "title": "The degree schema"
+                            },
+                            "fieldofstudy": {
+                                "type": "string",
+                                "title": "The fieldofstudy schema"
+                            },
+                            "from": {
+                                "type": "string",
+                                "title": "The from schema"
+                            },
+                            "to": {
+                                "type": "string",
+                                "title": "The to schema"
+                            },
+                            "current": {
+                                "type": "boolean",
+                                "title": "The current schema"
+                            },
+                            "description": {
+                                "type": "string",
+                                "title": "The description schema"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "social": {
+            "type": "object",
+            "title": "The social schema",
+            "required": [
+                "youtube",
+                "twitter",
+                "facebook",
+                "linkedin",
+                "instagram",
+                "medium"
+            ],
+            "properties": {
+                "youtube": {
+                    "type": "string",
+                    "title": "The youtube schema"
+                },
+                "twitter": {
+                    "type": "string",
+                    "title": "The twitter schema"
+                },
+                "facebook": {
+                    "type": "string",
+                    "title": "The facebook schema"
+                },
+                "linkedin": {
+                    "type": "string",
+                    "title": "The linkedin schema"
+                },
+                "instagram": {
+                    "type": "string",
+                    "title": "The instagram schema"
+                },
+                "medium": {
+                    "type": "string",
+                    "title": "The medium schema"
+                }
+            }
+        },
+        "date": {
+            "type": "string",
+            "title": "The date schema"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "valido": {
+    "company": "Loopz",
+    "status": "Automation Engineer",
+    "website": "https://loopz.com.br",
+    "skills": [
+      "ruby"
+    ]
+  },
+  "body-vazio" : {},
+  "status-invalido": {
+    "company": "Loopz",
+    "status": 123,
+    "website": "https://loopz.com.br",
+    "skills": [
+      "ruby"
+    ]
+  },
+  "skills-invalidas": {
+    "company": "Loopz",
+    "status": "Automation Engineer",
+    "website": "https://loopz.com.br",
+    "skills": 123
+  },
+  "website-invalido": {
+    "company": "Loopz",
+    "status": "Automation Engineer",
+    "website": "website",
+    "skills": [
+      "ruby"
+    ]
+  }
+}

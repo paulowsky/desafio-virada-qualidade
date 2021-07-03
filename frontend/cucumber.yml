@@ -1,0 +1,31 @@
+<% def timestamps
+  date = Time.now.strftime('%Y%m%d').to_s
+  time = Time.now.strftime('%H-%M-%S').to_s
+  "#{date}_#{time}"
+end %>
+
+<% RUN_TSTAMPs = timestamps.freeze %>
+
+# Template
+default: -p html_report -p json_report -p chrome -p web -p prod -p not_parallel_running
+parallel: -p html_parallel -p json_parallel -p chrome -p web -p prod -p parallel_running -p logger_parallel
+
+# Reports
+html_report: --format pretty --format html --out=reports/features_report_<%= RUN_TSTAMPs %>.html
+html_parallel: --format pretty --format html --out=reports/features_report_<%= ENV['TEST_ENV_NUMBER'] %>_<%= RUN_TSTAMPs %>.html
+json_report: --format pretty --format json --out=reports/features_report_<%= RUN_TSTAMPs %>.json
+json_parallel: --format pretty --format json --out=reports/features_report_<%= ENV['TEST_ENV_NUMBER'] %>_<%= RUN_TSTAMPs %>.json
+logger_parallel: --format ParallelTests::Cucumber::FailuresLogger --out cucumber_failures.log
+
+# Browsers
+chrome: BROWSER=chrome
+
+# Application
+web: APP=web
+
+# Targets
+prod:  TARGET=prod
+
+# Parallel
+parallel_running: PARALLELRUNNING=true
+not_parallel_running: PARALLELRUNNING=false

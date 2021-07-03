@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "title": "The root schema",
+  "required": [
+    "errors"
+  ],
+  "properties": {
+    "errors": {
+      "type": "array",
+      "title": "The errors schema",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "The first anyOf schema",
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string",
+                "title": "The msg schema"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
