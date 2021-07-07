@@ -40,7 +40,7 @@ Contribuições, issues e novas funcionalidades são bem-vindas!\
 
 Sinta-se à vontade para verificar a [página de issues](https://github.com/thiagojacinto/virada-qualidade-desafio/issues). 
 
-## Mostre seu apoio
+## ⭐️ Mostre seu apoio
 
 Dê uma ⭐️ se o projeto te ajudou de alguma forma! :)
 
