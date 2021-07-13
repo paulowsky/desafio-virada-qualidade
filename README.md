@@ -38,7 +38,7 @@ A execução do Jenkins foi configurada para rodar através dos Dockerfiles dos 
 Contribuições, issues e novas funcionalidades são bem-vindas!\
 #PRsWelcome
 
-Sinta-se à vontade para verificar a [página de issues](https://github.com/thiagojacinto/virada-qualidade-desafio/issues). 
+Sinta-se à vontade para verificar a [página de issues](https://github.com/paulowsky/desafio-virada-qualidade/issues). 
 
 ## ⭐️ Mostre seu apoio
 
